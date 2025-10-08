@@ -70,7 +70,7 @@ stage('RunDASTUsingZAP') {
                         // Create JIRA issues for each vulnerability
                         def jiraServer = 'JIRA_SERVER' // JIRA server configuration in Jenkins
                         for (vuln in vulnerabilities) {
-                            def testIssue = [
+                            def testIssue = [ 
                                 fields: [
                                     project: [key: 'DEV'],  
                                     summary: "Vulnerability Found: ${vuln.name}",
